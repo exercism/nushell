@@ -1,0 +1,32 @@
+{
+  "docs": [
+    {
+      "uuid": "a16ca4a8-f55c-4f43-abec-8b8835dee152",
+      "slug": "installation",
+      "path": "docs/INSTALLATION.md",
+      "title": "Installing Nushell locally",
+      "blurb": "Learn how to install Nushell locally to solve Exercism's exercises on your own machine"
+    },
+    {
+      "uuid": "8ba8348a-5a8b-484f-a7a9-492a08662417",
+      "slug": "learning",
+      "path": "docs/LEARNING.md",
+      "title": "How to learn Nushell",
+      "blurb": "An overview of how to get started from scratch with Nushell"
+    },
+    {
+      "uuid": "fa6de4ed-a612-469d-b1e9-c281f1025d6a",
+      "slug": "tests",
+      "path": "docs/TESTS.md",
+      "title": "Testing on the Nushell track",
+      "blurb": "Learn how to test your Nushell exercises on Exercism"
+    },
+    {
+      "uuid": "bdb19f67-c50f-4d92-bf35-33729c7dfb88",
+      "slug": "resources",
+      "path": "docs/RESOURCES.md",
+      "title": "Useful Nushell resources",
+      "blurb": "A collection of useful resources to help you master Nushell"
+    }
+  ]
+}
