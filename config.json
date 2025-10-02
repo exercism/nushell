@@ -15,10 +15,10 @@
     "indent_size": 4
   },
   "files": {
-    "solution": [],
-    "test": [],
-    "example": [],
-    "exemplar": []
+    "solution": ["%{kebab_slug}.nu"],
+    "test": ["tests.nu"],
+    "example": [".meta/example.nu"],
+    "exemplar": [".meta/exemplar.nu"]
   },
   "exercises": {
     "concept": [],
