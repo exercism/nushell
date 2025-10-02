@@ -14,17 +14,16 @@
     "indent_style": "space",
     "indent_size": 4
   },
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": [],
-    "exemplar": []
-  },
   "exercises": {
-    "concept": [],
-    "practice": []
-  },
-  "concepts": [],
-  "key_features": [],
-  "tags": []
+    "practice": [
+      {
+        "slug": "hello-world",
+        "name": "Hello World",
+        "uuid": "8eab75b2-d469-4fe8-825a-d249df70af3e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      }
+    ]
+  }
 }
