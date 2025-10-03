@@ -13,8 +13,8 @@ on:
 
 jobs:
   verify_exercises:
-    # TODO: replace with another image if required to run the tests (optional)
-    runs-on: ubuntu-24.04
+    # apk has an old nu version, so alpine is used to ensure compatibility
+    runs-on: alpine-3.22
 
     steps:
       - name: Checkout repository
@@ -22,16 +22,8 @@ jobs:
 
       - name: Use <setup tooling>
         run: |
-          curl -L -o nushell.tar.gz "https://github.com/nushell/nushell/releases/download/0.107.0/nu-0.107.0-x86_64-unknown-linux-gnu.tar.gz" && \
-          tar xvf nushell.tar.gz && \
-          mv nu-0.107.0-x86_64-unknown-linux-gnu/nu /usr/local/bin/nu && \
-          chmod +x /usr/local/bin/nu && \
-          export PATH=/usr/local/bin:$PATH
+          apk install jq nushell
 
-      # TODO: install any dependencies (optional)
-      # E.g. npm install, bundle install, etc.
-      # - name: Install project dependencies
-      #   run: <install dependencies>
 
       - name: Verify all exercises
         run: bin/verify-exercises
