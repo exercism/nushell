@@ -14,7 +14,14 @@
     "indent_style": "space",
     "indent_size": 4
   },
+  "files": {
+    "solution": [],
+    "test": [],
+    "example": [],
+    "exemplar": []
+  },
   "exercises": {
+    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
@@ -25,5 +32,8 @@
         "difficulty": 1
       }
     ]
-  }
+  },
+  "concepts": [],
+  "key_features": [],
+  "tags": []
 }
