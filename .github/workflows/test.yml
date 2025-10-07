@@ -25,7 +25,7 @@ jobs:
           curl -fsSL https://apt.fury.io/nushell/gpg.key | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/fury-nushell.gpg
           echo "deb https://apt.fury.io/nushell/ /" | sudo tee /etc/apt/sources.list.d/fury.list
           sudo apt update
-          sudo apt install jq nu=0.104.1
+          sudo apt install jq nushell=0.104.1
 
 
       - name: Verify all exercises
