@@ -14,15 +14,15 @@ on:
 jobs:
   verify_exercises:
     # apk has an old nu version, so alpine is used to ensure compatibility
-    runs-on: alpine-3.22
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
 
-      - name: Use <setup tooling>
+      - name: Use jq and nushell
         run: |
-          apk install jq nushell
+          sudo apt install jq nushell=0.104.1
 
 
       - name: Verify all exercises
