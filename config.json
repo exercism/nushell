@@ -39,6 +39,14 @@
         "difficulty": 1
       },
       {
+        "slug": "two-fer",
+        "name": "Two-Fer",
+        "uuid": "708fb88a-4ea8-4f96-b82c-863701736f49",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "forth",
         "name": "Forth",
         "uuid": "dafa6994-946a-462e-9107-25becff892ce",
