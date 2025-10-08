@@ -15,13 +15,20 @@
     "indent_size": 4
   },
   "files": {
-    "solution": ["%{kebab_slug}.nu"],
-    "test": ["tests.nu"],
-    "example": [".meta/example.nu"],
-    "exemplar": [".meta/exemplar.nu"]
+    "solution": [
+      "%{kebab_slug}.nu"
+    ],
+    "test": [
+      "tests.nu"
+    ],
+    "example": [
+      ".meta/example.nu"
+    ],
+    "exemplar": [
+      ".meta/exemplar.nu"
+    ]
   },
   "exercises": {
-    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
@@ -30,19 +37,25 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "slug": "two-fer",
+        "name": "Two-Fer",
+        "uuid": "708fb88a-4ea8-4f96-b82c-863701736f49",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
-  "concepts": [],
-  "key_features": [],
   "tags": [
     "paradigm/functional",
-    "typing/static",
-    "platform/windows",
-    "platform/mac",
-    "platform/linux",
     "platform/android",
+    "platform/linux",
+    "platform/mac",
+    "platform/windows",
     "runtime/language_specific",
+    "typing/static",
     "used_for/scripts"
   ]
 }
