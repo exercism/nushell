@@ -13,27 +13,21 @@ on:
 
 jobs:
   verify_exercises:
-    # TODO: replace with another image if required to run the tests (optional)
+    # apk has an old nu version, so alpine is used to ensure compatibility
     runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
 
-      # TODO: setup any tooling that is required to run the tests (optional)
-      # E.g. install a specific version of a programming language
-      # E.g. install packages via apt/apk/yum/etc.
-      # Find GitHub Actions to setup tooling here:
-      # - https://github.com/actions/?q=setup&type=&language=
-      # - https://github.com/actions/starter-workflows/tree/main/ci
-      # - https://github.com/marketplace?type=actions&query=setup
-      # - name: Use <setup tooling>
-      #   uses: <action to setup tooling>
+      - name: Use nushell
+        run: |
+          curl -L -o nu.tar.gz https://github.com/nushell/nushell/releases/download/0.104.1/nu-0.104.1-x86_64-unknown-linux-gnu.tar.gz && \
+          tar -xzf nu.tar.gz && \
+          sudo mv nu-0.104.1-x86_64-unknown-linux-gnu/* /usr/bin/ && \
+          rm nu.tar.gz && \
+          rm -r nu-0.104.1-x86_64-unknown-linux-gnu
 
-      # TODO: install any dependencies (optional)
-      # E.g. npm install, bundle install, etc.
-      # - name: Install project dependencies
-      #   run: <install dependencies>
 
       - name: Verify all exercises
         run: bin/verify-exercises
