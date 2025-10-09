@@ -11,7 +11,7 @@ assert equal (evaluate ["1 2 3 +"]) [1, 5]
 
 assert equal (evaluate ["3 4 -"]) [-1]
 assert equal (try {evaluate ["-"]} catch {|e| $e.msg}) "empty stack"
-assert equal ( try{evaluate ["1 -"]} catch {|e| $e.msg}) "only one value on the stack"
+assert equal (try {evaluate ["1 -"]} catch {|e| $e.msg}) "only one value on the stack"
 assert equal (evaluate ["1 12 3 -"]) [1, 9]
 
   
