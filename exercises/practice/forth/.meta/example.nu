@@ -1,29 +1,18 @@
-# def is_macro [instruction: list<string>] {
-#     (
-#         (($instruction | get 0) == ":") and
-#         ($instruction | get (($instruction | length) - 1)) == ";"
-#     )
-# }
-# def expand_macros [instructions: list<string>] {
-#   for instruction in ($instructions | enumerate) {
-#     let idx = $instruction | get index | get 0
-#     let instruction = $instruction | get item | debug | get 0  | split row " "
-#     if (is_macro ($instruction)) {
-#         let name = ($instruction | get 1)
-#         let definition = ($instruction | slice 1..-1 | str join " ")
-#         for instruction in ($instructions | slice $idx..) {
-#             if (is_macro $instruction) {
-#                 let inner_definition = $instruction | slice 1..-1 | each {|item|
-#                     if ($item == $name) {
-#                         $definition
-#                     } else $item
-#                 }
-
-#             }
-#         }
-#     }
-#   }
-# }
+def collect_macros [instruction_list: list<string>] {
+    mut defs: list<record<name: string>> = []
+    for item in $instruction_list {
+        if $item =~ ": .+? .+? ;" {
+            let name = $item | parse ": {name} {_} ;" | get name
+            let definition = $item | parse ": {_} {definition} ;" | get definition
+            $defs = $defs | append {$name: $definition}
+        }
+    }
+    $defs
+}
+def expand_macros [instruction_list: list<string>] {
+    let defs = collect_macros $instruction_list
+    # Expand
+}
 def perform [stack: list<int>, action: string] {
     if ($action | find --regex "-?\\d") == $action { # Literals
         $stack | append ($action | into int)
