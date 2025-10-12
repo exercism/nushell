@@ -36,5 +36,9 @@ let abilities1 = [(strength $character) (dexterity $character) (constitution $ch
 let abilities2 = [(strength $character) (dexterity $character) (constitution $character) (intelligence $character) (wisdom $character) (charisma $character)] 
 assert equal $abilities1 $abilities2
 
-let abilities = 0..100 | each {ability} | uniq
-assert greater ($abilities | length) 1
+let abilities = 0..100 | each {ability} 
+assert greater ($abilities | uniq | length) 1
+for ability in $abilities {
+    assert greater or equal $ability 3
+    assert less or equal $ability 18
+}
