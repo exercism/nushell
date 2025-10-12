@@ -22,46 +22,19 @@ let ability = ability
 assert greater or equal $ability 3
 assert less or equal $ability 18
 
-    {
-      "uuid": "385d7e72-864f-4e88-8279-81a7d75b04ad",
-      "description": "random character is valid",
-      "scenarios": ["random"],
-      "property": "character",
-      "input": {},
-      "expected": {
-        "strength": "strength >= 3 && strength <= 18",
-        "dexterity": "dexterity >= 3 && dexterity <= 18",
-        "constitution": "constitution >= 3 && constitution <= 18",
-        "intelligence": "intelligence >= 3 && intelligence <= 18",
-        "wisdom": "wisdom >= 3 && wisdom <= 18",
-        "charisma": "charisma >= 3 && charisma <= 18",
-        "hitpoints": "hitpoints == 10 + modifier(constitution)"
-      }
-    },
-    {
-      "uuid": "2ca77b9b-c099-46c3-a02c-0d0f68ffa0fe",
-      "description": "each ability is only calculated once",
-      "property": "strength",
-      "input": {},
-      "expected": "strength == strength"
-    },
-    {
-      "uuid": "dca2b2ec-f729-4551-84b9-078876bb4808",
-      "reimplements": "2ca77b9b-c099-46c3-a02c-0d0f68ffa0fe",
-      "description": "each ability is only calculated once",
-      "comments": [
-        "Expected values were changed to cover all character abilities"
-      ],
-      "property": "character",
-      "input": {},
-      "expected": {
-        "strength": "strength == strength",
-        "dexterity": "dexterity == dexterity",
-        "constitution": "constitution == constitution",
-        "intelligence": "intelligence == intelligence",
-        "wisdom": "wisdom == wisdom",
-        "charisma": "charisma == charisma"
-      }
-    }
-  ]
+let character = character
+let abilities = [(strength $character) (dexterity $character) (constitution $character) (intelligence $character) (wisdom $character) (charisma $character)] 
+for ability in $abilities {
+    assert greater or equal $ability 3
+    assert less or equal $ability 18
 }
+
+let character = character
+assert equal (strength $character) (strength $character)
+let character = character
+let abilities1 = [(strength $character) (dexterity $character) (constitution $character) (intelligence $character) (wisdom $character) (charisma $character)]
+let abilities2 = [(strength $character) (dexterity $character) (constitution $character) (intelligence $character) (wisdom $character) (charisma $character)] 
+assert equal $abilities1 $abilities2
+
+let abilities = 0..100 | each {ability} | uniq
+assert greater ($abilities | length) 1

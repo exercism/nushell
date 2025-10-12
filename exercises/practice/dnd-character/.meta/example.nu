@@ -1,5 +1,5 @@
 export def modifier [score: int] { 
-    (int - 10) / 2
+    ($score - 10) / 2 | math floor
 }
 
 export def ability [] {
