@@ -3,7 +3,7 @@ export def modifier [score: int] {
 }
 
 export def ability [] {
-    let rolls: list<any> = 1..4 | each {random int 0..6}
+    let rolls: list<any> = 1..4 | each {random int 1..6}
     $rolls | sort | reverse | drop 1 | reduce {|it, acc| $acc + $it }
 }
 
