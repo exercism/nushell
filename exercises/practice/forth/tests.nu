@@ -1,4 +1,3 @@
-# TODO: user-defined word cases.
 use forth.nu evaluate
 use std/assert
 assert equal (evaluate ["1 2 3 4 5"]) [1, 2, 3, 4, 5]
