@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "quintuple-mallard"
+  ],
+  "files": {
+    "solution": [
+      "strain.nu"
+    ],
+    "test": [
+      "tests.nu"
+    ],
+    "example": [
+      ".meta/example.nu"
+    ]
+  },
+  "blurb": "Implement the `keep` and `discard` operation on collections.",
+  "source": "Conversation with James Edward Gray II",
+  "source_url": "http://graysoftinc.com/",
+  "difficulty": 2
+}
