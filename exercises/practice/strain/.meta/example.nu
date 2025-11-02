@@ -1,7 +1,7 @@
-export def keep [list, predicate] {
-    let mask = $list | each $predicate
+export def keep [predicate] {
+    let mask = $in | each $predicate
     mut kept = []
-    for item in ($list | enumerate) {
+    for item in ($in | enumerate) {
         let idx = $item.index
         let item = $item.item
         if ($mask | get $idx) {
@@ -11,10 +11,10 @@ export def keep [list, predicate] {
     $kept
 }
 
-export def discard [list, predicate] {
-    let mask = $list | each $predicate
+export def discard [ predicate] {
+    let mask = $in | each $predicate
     mut kept = []
-    for item in ($list | enumerate) {
+    for item in ($in | enumerate) {
         let idx = $item.index
         let item = $item.item
         if not ($mask | get $idx) {

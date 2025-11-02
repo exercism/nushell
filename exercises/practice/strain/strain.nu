@@ -1,7 +1,7 @@
-export def keep [list, predicate] {
+export def keep [predicate] {
     error make {"msg": "Remove this line and implement keep"}
 }
 
-export def discard [list, predicate] {
+export def discard [predicate] {
     error make {"msg": "Remove this line and implement discard"}
 }
