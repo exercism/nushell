@@ -69,6 +69,30 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "e4c59681-3664-4ad4-8948-83b6084ad244",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "366f8b1c-2368-4e96-9dff-21b552a3be14",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "a1f5a88f-aa72-405f-88a3-e1a120ce3a89",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
