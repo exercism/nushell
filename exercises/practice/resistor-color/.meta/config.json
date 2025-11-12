@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "quintuple-mallard"
+  ],
+  "files": {
+    "solution": [
+      "resistor-color.nu"
+    ],
+    "test": [
+      "tests.nu"
+    ],
+    "example": [
+      ".meta/example.nu"
+    ]
+  },
+  "blurb": "Convert a resistor band's color to its numeric representation.",
+  "source": "Maud de Vries, Erik Schierboom",
+  "source_url": "https://github.com/exercism/problem-specifications/issues/1458",
+  "difficulty": 1
+}
