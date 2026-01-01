@@ -1,4 +1,4 @@
-def make_options [flags: list<string>, files: list<path>] {
+def make_options [flags: list<string>, files: list<string>] {
     {
         filename: (($files | length) != 1),
         line_number: (-n in $flags),
@@ -48,7 +48,7 @@ def grep-single [pattern: string, options: record, file: path] {
     }
 }
 
-export def main [pattern: string, flags: list<string>, files: list<path>] {
+export def main [pattern: string, flags: list<string>, files: list<string>] {
     let options = make_options $flags $files
     
     
