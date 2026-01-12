@@ -3,5 +3,5 @@ def clean [phrase: string] {
 }
 export def is_isogram [phrase: string] {
     let phrase = clean $phrase
-    ($phrase | uniq ) == $phrase
+    ($phrase | uniq) == $phrase
 }

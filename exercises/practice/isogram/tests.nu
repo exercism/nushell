@@ -1,5 +1,6 @@
 use isogram.nu is_isogram
 use std/assert
+
 assert equal (is_isogram "") true
 assert equal (is_isogram "isogram") true
 assert equal (is_isogram "eleven") false
