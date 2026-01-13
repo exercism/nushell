@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "quintuple-mallard"
+  ],
+  "files": {
+    "solution": [
+      "isogram.nu"
+    ],
+    "test": [
+      "tests.nu"
+    ],
+    "example": [
+      ".meta/example.nu"
+    ]
+  },
+  "blurb": "Determine if a word or phrase is an isogram.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Isogram"
+}
