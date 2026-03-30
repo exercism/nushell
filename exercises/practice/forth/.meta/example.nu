@@ -1,3 +1,4 @@
+alias find = find -n
 def macro? [item] {
     let trimmed = ($item | str trim)
     ($trimmed | find --regex "^:\\s+[^\\s]+\\s+.+\\s+;$") == $trimmed

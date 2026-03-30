@@ -1,5 +1,5 @@
 export def color_code [color] {
-    colors | enumerate | filter {|item| $item.item == $color} | get index | get 0
+    colors | enumerate | where $it.item == $color | get index | get 0
 }
 
 export def colors [] {
