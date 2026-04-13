@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "quintuple-mallard"
+  ],
+  "files": {
+    "solution": [
+      "acronym.nu"
+    ],
+    "test": [
+      "tests.nu"
+    ],
+    "example": [
+      ".meta/example.nu"
+    ]
+  },
+  "blurb": "Convert a long phrase to its acronym.",
+  "source": "Julien Vanier",
+  "source_url": "https://github.com/monkbroc"
+}
