@@ -6,7 +6,7 @@ def macro? [item] {
 
 def parse_definition [def: string] {
     let parsed = ($def | parse ": {name} {body} ;")
-    let name = ($parsed.name | get 0 | str trim | str downcase)
+    let name = ($parsed.name | get 0 | str trim | str lowercase)
     let tokens = ($parsed.body | get 0 | str trim | split row " ")
     {
         name: $name,
@@ -17,8 +17,8 @@ def parse_definition [def: string] {
 def replace_tokens [tokens: list<string>, defname: string, definition: list<string>] {
     mut result = []
     for token in $tokens {
-        let token_lower = ($token | str downcase | str trim)
-        let name_lower = ($defname | str downcase | str trim)
+        let token_lower = ($token | str lowercase | str trim)
+        let name_lower = ($defname | str lowercase | str trim)
         if $token_lower == $name_lower {
             for deftoken in $definition {
                 $result = ($result | append $deftoken)
@@ -71,7 +71,7 @@ def expand_macros [instructions: list<string>] {
             mut next = []
             
             for token in $tokens {
-                let token_lower = ($token | str downcase)
+                let token_lower = ($token | str lowercase)
                 let matches = ($defs | where name == $token_lower)
                 if ($matches | length) > 0 {
                     let match = ($matches | first)
@@ -165,7 +165,7 @@ export def evaluate [instructions: list<string>] {
     
     mut stack: list<int> = []
     for token in $tokens {
-        let norm = ($token | str downcase | str trim)
+        let norm = ($token | str lowercase | str trim)
         $stack = perform $stack $norm
     }
     $stack

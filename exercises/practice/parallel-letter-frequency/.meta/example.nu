@@ -19,7 +19,7 @@ def merge_add [second] {
 }
 
 def make_chunks [texts: list<string>] {
-    let text = $texts | str join | split chars | str downcase | where $it in "abcdefghijklmnopqrstuvwxyz"
+    let text = $texts | str join | split chars | str lowercase | where $it in "abcdefghijklmnopqrstuvwxyz"
     let n_chunks = ($text | length) // (sys cpu | length)
     let n_chunks = if ($n_chunks <= 0) {
         1

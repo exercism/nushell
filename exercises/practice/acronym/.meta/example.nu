@@ -1,5 +1,5 @@
 def alphabetic [c: string] {
-    let c = $c | str downcase 
+    let c = $c | str lowercase 
     $c >= a and $c <= z
 }
 export def abbreviate [phrase: string] {
@@ -10,5 +10,5 @@ export def abbreviate [phrase: string] {
     | split row -r "[ -]"
     | each {|w| $w | split chars | first}
     | str join
-    | str upcase
+    | str uppercase
 }
