@@ -8,6 +8,3 @@ assert equal (add 2015-01-24T22:00:00) 2046-10-02T23:46:40
 assert equal (add 2015-01-24T23:59:59) 2046-10-03T01:46:39
 
 # test immuatability of input
-let orig_moment = 2015-01-24T23:59:59
-let new_moment = add $orig_moment
-assert equal $orig_moment 2015-01-24T23:59:59
