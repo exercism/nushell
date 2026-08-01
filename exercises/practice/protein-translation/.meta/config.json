@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "YanniPapandreou"
+  ],
+  "files": {
+    "solution": [
+      "protein-translation.nu"
+    ],
+    "test": [
+      "tests.nu"
+    ],
+    "example": [
+      ".meta/example.nu"
+    ]
+  },
+  "blurb": "Translate RNA sequences into proteins.",
+  "source": "Tyler Long"
+}

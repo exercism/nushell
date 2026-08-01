@@ -15,7 +15,7 @@ def turnl [robot: record<position: record<x: int, y: int>, direction: string>] {
   let idx = $directions | indexof $robot.direction
   $robot | update direction ($directions | get (($idx - 1) mod 4 | into cell-path))
 }
-export def run [instructions: string]: record<position: record<x: int, y: int>, direction: string> -> record<position: record<x: int, y: int>, direction: string> {
+export def move [instructions: string]: record<position: record<x: int, y: int>, direction: string> -> record<position: record<x: int, y: int>, direction: string> {
   let robot = $in
   $instructions | split chars | reduce --fold $robot {|c, robot|
     match $c {

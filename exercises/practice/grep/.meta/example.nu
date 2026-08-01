@@ -22,8 +22,8 @@ def grep-single [pattern: string, options: record, file: path] {
         mut upcased  = $line
         mut pattern = $pattern
         if $options.insensitive {
-            $upcased = $upcased | str upcase
-            $pattern = $pattern | str upcase
+            $upcased = $upcased | str uppercase
+            $pattern = $pattern | str uppercase
         }
          
         if $options.inverted xor (do $contains $pattern $upcased) {

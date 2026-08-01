@@ -149,6 +149,70 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "nucleotide-count",
+        "name": "Nucleotide Count",
+        "uuid": "f02a6a6d-f0c8-428c-b30d-b1d805ed0c5d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "allergies",
+        "name": "Allergies",
+        "uuid": "af02524b-1972-4c50-b91b-e0ee0355ca07",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "56df31c7-1f94-41d8-b69d-318c2249304e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "uuid": "6373b2e6-4db8-4b3b-b9f6-870b2e0b10a8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "061e2ed2-c643-4d1f-9f62-822ef6871cc3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "grains",
+        "name": "Grains",
+        "uuid": "d6017619-6ef0-4ad2-9d74-1075f7822f21",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "gigasecond",
+        "name": "Gigasecond",
+        "uuid": "1e3400a3-248c-43d8-828c-85db598122dd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "meetup",
+        "name": "Meetup",
+        "uuid": "6712bff7-70a4-4718-b00c-59960b0135ac",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
