@@ -1,0 +1,14 @@
+def most-common-word [text: string] {
+    mut counts = {}
+    mut best = ""
+    mut best_count = 0
+    for word in ($text | str downcase | split row " ") {
+        let count = ($counts | get --optional $word | default 0) + 1
+        $counts = ($counts | upsert $word $count)
+        if $count > $best_count {
+            $best = $word
+            $best_count = $count
+        }
+    }
+    $"\"($best)\" appears ($best_count) times"
+}
